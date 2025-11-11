@@ -18,6 +18,7 @@ const moment = require("moment-timezone");
 const axios = require("axios");
 const pino = require("pino");
 const chalk = require("chalk");
+const bot = new Telegraf(BOT_TOKEN);
 const figlet = require("figlet");
 const gradient = require("gradient-string");
 const { BOT_TOKEN } = require("./Token");
@@ -54,8 +55,6 @@ const developerId = "7454464877";
 
 const bot = new Telegraf(BOT_TOKEN);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-bot.use(session());
 
 const randomImages = [
    "https://files.catbox.moe/pbxxqf.jpg",
